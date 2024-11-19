@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  login-automation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: login-automation
+    volumes:
+      - ./cookies.json:/app/cookies.json  # Persist cookies between runs
+      - ./login_proof.png:/app/login_proof.png  # Save screenshots locally
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
