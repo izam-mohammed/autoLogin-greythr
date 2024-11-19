@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "greythr"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+playwright = "^1.48.0"
+python-dotenv = "^1.0.1"
+pytz = "^2024.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
